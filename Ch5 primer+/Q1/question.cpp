@@ -5,23 +5,38 @@ the user enters 2 and 9, the program should report that the sum of all the integ
 from 2 through 9 is 44.*/
 
 #include <iostream>
-#include <cstring>
+
+int cumulative_sum(int i , int j);
 
 using namespace std;
 
 int main(){
-    int a,b;
-    cout << "enter two numbers:-\n" << "a: ";
+    int a;
+    int b;
+    cout << "Enter two numbers: " << "\na = ";
     cin >> a;
-    cout << "b: ";
+    cout << "b = ";
     cin >> b;
+    if(a > b)
+    {
+        int swap = b;
+        b = a;
+        a = swap;
+        cout << "Swapping numbers..." << endl;
+        cout << "a = " << a << "\nb = " << b << endl;
+    }
+    int sum_of_numbers = cumulative_sum(a , b);
+    cout << "sum of numbers between and including " << a << " & " << b << " is " << sum_of_numbers << endl;
+    return 0; 
+}
+
+int cumulative_sum(int i , int j){
     int sum = 0;
-    sum = sum + a;
-    int total = 0;
-    for (int count = 0; count <= (b - a) ; count ++){
-        total = total + sum;
-        sum ++;
-        cout << total << endl;
-    } 
-    return 0;
+    int swap;
+    while (i <= j)
+    {
+        sum += i;
+        i++;
+    }
+    return sum;    
 }
