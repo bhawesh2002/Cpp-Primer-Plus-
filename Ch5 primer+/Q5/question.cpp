@@ -7,23 +7,25 @@ and report the total sales for the year.*/
 
 #include <iostream>
 #include <string>
-const int months_in_year = 12;
 
+const int no_of_months = 12;
 using namespace std;
 
-int main(){
-    int sales[months_in_year];
-    string months[months_in_year] = {"January", "Feburary" , "March" , "April" , "May" , "June" , "July" , "August" ,
-     "September" , "October" , "November" , "December"};
-    int sum = 0;
-    cout << "Enter the sales for \'C++ for Fool's\' per month:-" << endl;
-    for (int i = 0; i < months_in_year; i++)
+int main()
+{
+    const string month_name[no_of_months] = {"January", "Feburary", "March", "April", "May", "June", "July", "August", "September",
+                               "October", "November", "December"};
+    int selled[no_of_months];
+    int total_sells = 0;
+    cout << "Enter the number of books selled each month" << endl;
+    for (int i = 0; i < no_of_months; i++)
     {
-        cout << months[i] << ": ";
-        cin >> sales[i];
-        sum += sales[i];
+        cout << month_name[i] << " : ";
+        cin >> selled[i];
+        total_sells += selled[i];
     }
-    cout << "Total sales in a year: " << sum << endl;
 
-    return 0;         
+    cout << "Total sales of the year: " << total_sells << endl;
+    return 0;
+        
 }
