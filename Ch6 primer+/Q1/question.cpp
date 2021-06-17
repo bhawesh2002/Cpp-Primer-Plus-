@@ -9,34 +9,20 @@ using namespace std;
 
 int main(){
     cout << "Enter a text for analysis. Use \'@\' to terminate the text....." << endl;
+    char ch;
+    cin.get(ch);
 
-    int uppercase = 0;
-    int lowercase = 0;
-    int chars;
-    int i = 0;
-
-    char ch[200];
-    char ch2[200];
-    cin.get(ch[i]);
-
-    while (ch[i] != '@')
+    while (cin.get(ch))
     {
-        if (isupper(ch[i]))
+        if (isupper(ch))
         {
-            chars++;
-            uppercase++;
-            tolower(ch[i]);
-            ch2[i] = ch[i];
-        }else if (islower(ch[i]))
+            tolower(ch);
+        }else if (islower(ch))
         {
-            chars++;
-            lowercase++;
-            toupper(ch[i]);
-            ch2[i] = ch[i];
-        }
-        ++i;
-        cin.get(ch[i]);        
+            toupper(ch);
+        }else if(ch == '@'){
+            break;
+        }        
     }
-    cout << "Original Sentence : " << ch << endl;
-    cout << "Altered Sentence : " << ch2 << endl;
+    cout << "Altered Sentence : " << ch << endl;
  }
