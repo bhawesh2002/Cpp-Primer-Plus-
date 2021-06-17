@@ -39,7 +39,8 @@ int main()
     {
         cout << "Car #" << i + 1 << endl;
         cout << "Please enter the made: ";
-        cin >> details[i].make;
+        cin.ignore();
+        getline(cin,details[i].make);
         cout << "Please enter the year made: ";
         cin >> details[i].built_year;
         if (i == entries - 1)
