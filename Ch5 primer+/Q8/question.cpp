@@ -9,15 +9,21 @@ You should include the cstring header file and use the strcmp() function to
 make the comparison test.*/
 
 #include <iostream>
-#include <string>
 #include <cstring>
+
+const char DONE[] = "done";
 
 using namespace std;
 
-int main(){
-    char * name = new char[20];
-    cout << "Enter your name: ";
-    cin.getline(name,20);
-    cout << name;
+int main()
+{
+    char text[256] = "";
+    int count = 1;
+    while (strcmp(text, DONE) != 0)
+    {
+        cin >> text;
+        count++;
+    }
+    cout << "No of words entered: " << count << endl;
     return 0;
 }
