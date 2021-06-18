@@ -18,12 +18,12 @@ using namespace std;
 int main()
 {
     char text[256] = "";
-    int count = 1;
+    int count = 0;
     while (strcmp(text, DONE) != 0)
     {
         cin >> text;
         count++;
     }
-    cout << "No of words entered: " << count << endl;
+    cout << "No of words entered: " << count - 1 << endl;
     return 0;
 }
