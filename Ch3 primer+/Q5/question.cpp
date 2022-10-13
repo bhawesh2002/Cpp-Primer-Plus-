@@ -14,14 +14,14 @@ using namespace std;
 
 int main(){
 
-    int world_pop;
-    int usa_pop;
+    long long world_pop;
+    long long usa_pop;
 
     cout << "Enter the World's present population = " << "_______________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
     cin >> world_pop;
     cout << "Enter USA's total population = " << "_______________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
     cin >> usa_pop;
-    float percent_pop = (float(usa_pop)/float(world_pop) )* 100;
+    double percent_pop = (double(usa_pop)/double(world_pop) )* 100;
     cout << "The population of USA is " << percent_pop << "% of the world's population" << endl;
 
     return 0;
