@@ -15,14 +15,15 @@ using namespace std;
 int main(){
 
     long long world_pop;
-    long long usa_pop;
-
+    long long country_pop;
     cout << "Enter the World's present population = " << "_______________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
     cin >> world_pop;
-    cout << "Enter USA's total population = " << "_______________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
-    cin >> usa_pop;
-    double percent_pop = (double(usa_pop)/double(world_pop) )* 100;
-    cout << "The population of USA is " << percent_pop << "% of the world's population" << endl;
-
+    cout << "Entry your Country Name: ";
+    string country_name{};
+    cin >> country_name;
+    cout << "Enter " << country_name << "'s total population = " << "_______________\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b";
+    cin >> country_pop;
+    double percent_pop = (double(country_pop)/double(world_pop) )* 100;
+    cout << "The population of " << country_name << " is " << percent_pop << " % " << "of the world's population" << endl;
     return 0;
 }
