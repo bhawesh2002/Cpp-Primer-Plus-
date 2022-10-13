@@ -10,7 +10,7 @@ int main(){
 
     int height;
     const int inches_to_feet = 12;
-    cout << "Enter Your Height (In Inches)" << "___\b\b\b";
+    cout << "Enter Your Height (In Inches)" << " ___\b\b\b";
     cin >> height;
     int feet = height/12;
     int inches = height%12;
