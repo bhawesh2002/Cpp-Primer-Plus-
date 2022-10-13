@@ -14,7 +14,7 @@ using namespace std;
 int main(){
     float liters;
     float kms;
-    cout << "Choose one of the following:-\n" << "a)American unit(m/g)         e)European unit(l/km)         \nq)QUit\n" << endl;
+    cout << "Choose one of the following:-\n" << "a)American unit(m/g)\t\te)European unit(l/km)\t\tq)QUit\n" << endl;
     char opt;
     cin >> opt;
     while (opt != 'q')
@@ -53,7 +53,7 @@ int main(){
             cout << "\nPlease enter \'a\' ,\'e\' or \'q\'\n" << endl;   
             break;
         }
-        cout << "Choose one of the following:-\n" << "a)American unit(m/g)         e)European unit(l/km)         \nq)QUit\n" << endl;
+        cout << "Choose one of the following:-\n" << "a)American unit(m/g)\t\te)European unit(l/km)\t\tq)QUit\n" << endl;
         cin >> opt;
     }
     cout << "---------Thank You---------" << endl;
